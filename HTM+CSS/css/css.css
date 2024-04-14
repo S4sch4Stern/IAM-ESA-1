@@ -1,13 +1,19 @@
+/* Modifiziert nach den Vorgaben von Aufgabe 1 (HTM & CSS)  durch: Alexander Thofern */
+
 /* variable declarations */
 :root {
-    --myapp-color-background: limegreen;
+    --myapp-color-background: rgb(255, 255, 255);
+    --myapp-color-header: rgb(255, 255, 255);
+    --myapp-color-seperator: rgb(255, 255, 255);
+    --myapp-color-background: rgb(255, 255, 255);
+
 }
 
 html, body {
     background-color: var(--myapp-color-background);
     margin: 0px;
     font-family: "Avenir Medium", sans-serif;
-    color: white;
+    color: rgb(0, 0, 0);
     width: 100%;
     max-width: 100%;
     height: 100%;
@@ -21,3 +27,97 @@ html, body {
     -moz-user-select: none;
     -webkit-user-select: none;
 }
+
+/*buttons style */
+.button {
+    filter: invert(90%);
+    -webkit-filter: invert(90%);
+    background-color: transparent;
+    height: 30px;
+    width: 30px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 0px;
+    border: none;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    display: inline-block;
+    background-origin: content-box;
+    background-position: center center;
+}
+/*buttons style end*/
+
+/*Button images */
+.icon-sandwich {
+    filter: invert(60%); 
+    -webkit-filter: invert(60%);
+    background-image: url("./img/png/menu_FILL0_wght400_GRAD0_opsz24.png");
+    background-size: 23px 23px;
+    /*float: left;*/
+    justify-content: flex-start;
+
+}
+
+.icon-tiles {
+    filter: invert(60%); 
+    -webkit-filter: invert(60%);
+    background-image: url("./img/png/grid_view_FILL0_wght400_GRAD0_opsz24.png");
+    background-size: 23px 23px;
+    /*float: left;*/
+    justify-content: flex-start;
+}
+
+.icon-plus {
+    filter: invert(60%); 
+    -webkit-filter: invert(60%);
+    background-image: url("./img/png/add_FILL0_wght400_GRAD0_opsz24.png");
+    background-size: 23px 23px;
+    /*float: left;*/
+    justify-content: flex-start;
+}
+
+.list-element-menu {
+    filter: invert(60%); 
+    -webkit-filter: invert(60%);
+    background-image: url("./img/png/more_vert_FILL0_wght400_GRAD0_opsz24.png");
+    background-size: 23px 23px;
+    /*float: left;*/
+    justify-content: flex-start;
+}
+
+.icon-logout {
+    filter: invert(60%); 
+    -webkit-filter: invert(60%);
+    background-image: url("./img/png/logout_FILL0_wght400_GRAD0_opsz24.png");
+    background-size: 23px 23px;
+    /*float: left;*/
+    justify-content: flex-start;
+    
+}
+
+.icon-refresh {
+    filter: invert(60%); 
+    -webkit-filter: invert(60%);
+    background-image: url("./img/png/sync_FILL0_wght400_GRAD0_opsz24.png");
+    /*float: right;*/
+    justify-content: flex-end;
+    margin-left: auto;
+    
+}
+/*Button images end*/
+
+
+/*List style */
+
+li{
+    list-style: none;
+}
+/*List style end*/
+
+.list-element-menu{
+    background-image:url("./img/png/more_vert_FILL0_wght400_GRAD0_opsz24.png");
+    background-color: transparent;
+}
+
+
