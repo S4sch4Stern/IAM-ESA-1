@@ -2,10 +2,12 @@
 
 /* variable declarations */
 :root {
-    --myapp-color-background: rgb(255, 255, 255);
     --myapp-color-header: rgb(255, 255, 255);
-    --myapp-color-seperator: rgb(255, 255, 255);
+    --myapp-color-main: rgb(255, 255, 255);
     --myapp-color-background: rgb(255, 255, 255);
+    --myapp-color-headerline: rgb(189, 189, 189);
+    --myapp-color-footerline: rgb(255, 131, 0);
+   
 
 }
 
@@ -27,6 +29,37 @@ html, body {
     -moz-user-select: none;
     -webkit-user-select: none;
 }
+
+/*main html structure start*/
+header {
+    background-color: var(--myapp-color-header);
+    border-bottom: 5px solid var(--myapp-color-headerline);
+    height: 50px;
+    width: 100%;
+    max-width: 100%;
+    line-height: 50px;
+ 
+}
+
+footer {   
+    background-color: var(--myapp-color-header);
+    border-top: 5px solid var(--myapp-color-footerline);
+    height: 50px;
+    width: 100%;
+    max-width: 100%;
+}
+  
+header, footer, li {
+    display: flex;
+}
+
+h1 {
+    font-size: 14pt;
+    font-weight: normal;
+    margin: 0px;
+    display: inline-block;
+}
+/*main html structure end*/
 
 /*buttons style */
 .button {
