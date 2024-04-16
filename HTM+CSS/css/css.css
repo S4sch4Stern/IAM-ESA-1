@@ -5,7 +5,8 @@
     --myapp-color-header: rgb(255, 255, 255);
     --myapp-color-main: rgb(255, 255, 255);
     --myapp-color-background: rgb(255, 255, 255);
-    --myapp-color-headerline: rgb(189, 189, 189);
+    --myapp-color-darkgreyline: rgb(154, 153, 153);
+    --myapp-color-listline: rgb(208, 208, 208);
     --myapp-color-footerline: rgb(255, 131, 0);
    
 
@@ -33,12 +34,24 @@ html, body {
 /*main html structure start*/
 header {
     background-color: var(--myapp-color-header);
-    border-bottom: 5px solid var(--myapp-color-headerline);
+    border-bottom: 5px solid var(--myapp-color-darkgreyline);
     height: 50px;
     width: 100%;
     max-width: 100%;
     line-height: 50px;
  
+}
+
+main {
+    background-color: var(--myapp-color-main);
+    width: 100%;
+    max-width: 100%;   
+    height: calc(100% - (110px));
+    height: -webkit-calc(100% - 110px);
+    max-height: calc(100% - 50px);
+    max-height: -webkit-calc(100% - 110px);
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 footer {   
@@ -49,16 +62,36 @@ footer {
     max-width: 100%;
 }
   
-header, footer, li {
+header, footer{
     display: flex;
 }
 
 h1 {
-    font-size: 14pt;
+    font-size: 20pt;
     font-weight: normal;
     margin: 0px;
     display: inline-block;
+    margin-right: auto;
 }
+.main-list{
+    margin: 0px;
+    padding: 20px 0px 0px 0px;
+         
+}
+ul{
+    background-color: var(--myapp-color-listline);
+}
+
+li{
+    margin: none;
+    padding: none;
+    background-color: var(--myapp-color-background);
+    border-bottom: 3px solid var(--myapp-color-darkgreyline);
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
 /*main html structure end*/
 
 /*buttons style */
@@ -66,18 +99,20 @@ h1 {
     filter: invert(90%);
     -webkit-filter: invert(90%);
     background-color: transparent;
-    height: 30px;
-    width: 30px;
-    margin-top: 10px;
+    background-repeat: no-repeat;
+    background-size:30px 30px;
+    margin-top: 5px;
     margin-right: 10px;
     margin-left: 10px;
+    margin-bottom: 15px;
     padding: 0px;
     border: none;
-    background-repeat: no-repeat;
-    background-size: 30px 30px;
+    height: 30px;
+    width: 30px;
     display: inline-block;
     background-origin: content-box;
     background-position: center center;
+    
 }
 /*buttons style end*/
 
@@ -87,9 +122,13 @@ h1 {
     -webkit-filter: invert(60%);
     background-image: url("./img/png/menu_FILL0_wght400_GRAD0_opsz24.png");
     background-size: 23px 23px;
-    /*float: left;*/
     justify-content: flex-start;
+    width: 40px;
+    height: 40px;
+    background-size: 100% 100%;
 
+
+      
 }
 
 .icon-tiles {
@@ -97,8 +136,11 @@ h1 {
     -webkit-filter: invert(60%);
     background-image: url("./img/png/grid_view_FILL0_wght400_GRAD0_opsz24.png");
     background-size: 23px 23px;
-    /*float: left;*/
-    justify-content: flex-start;
+    justify-content: flex-end;
+    margin-left: auto;
+    width: 40px;
+    height: 40px;
+    background-size: 100% 100%;
 }
 
 .icon-plus {
@@ -106,8 +148,10 @@ h1 {
     -webkit-filter: invert(60%);
     background-image: url("./img/png/add_FILL0_wght400_GRAD0_opsz24.png");
     background-size: 23px 23px;
-    /*float: left;*/
     justify-content: flex-start;
+    width: 40px;
+    height: 40px;
+    background-size: 100% 100%;
 }
 
 .list-element-menu {
@@ -115,8 +159,10 @@ h1 {
     -webkit-filter: invert(60%);
     background-image: url("./img/png/more_vert_FILL0_wght400_GRAD0_opsz24.png");
     background-size: 23px 23px;
-    /*float: left;*/
     justify-content: flex-start;
+    width: 40px;
+    height: 40px;
+    background-size: 100% 100%;
 }
 
 .icon-logout {
@@ -124,8 +170,11 @@ h1 {
     -webkit-filter: invert(60%);
     background-image: url("./img/png/logout_FILL0_wght400_GRAD0_opsz24.png");
     background-size: 23px 23px;
-    /*float: left;*/
     justify-content: flex-start;
+    margin-right: auto;
+    width: 40px;
+    height: 40px;
+    background-size: 100% 100%;
     
 }
 
@@ -133,24 +182,75 @@ h1 {
     filter: invert(60%); 
     -webkit-filter: invert(60%);
     background-image: url("./img/png/sync_FILL0_wght400_GRAD0_opsz24.png");
-    /*float: right;*/
     justify-content: flex-end;
     margin-left: auto;
-    
+    width: 40px;
+    height: 40px;
+    background-size: 100% 100%;
 }
 /*Button images end*/
 
 
-/*List style */
 
-li{
-    list-style: none;
+
+/*List-element view start*/
+/*
+.list-element{
+    padding: 10px 10px 20px 10px;
+    height: 70px;
+    width: 100%;
 }
-/*List style end*/
+
+
+.list-element-attributes{
+    padding: 10px 10px 20px 10px;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /*position: absolute;*//*
+    left: 90px;
+    right: 10px;
+}
+/*
+.list-element-image{
+    height: 70px;
+    width: 70px;
+    /*  position: absolute;
+        object-fit: cover;
+        *//*
+}
+
+.attribute-origin{
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 6px;
+
+
+}
+
+.attribute-date{
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 6px;
+
+
+}
+/*
+.viewport .attribute-tag::before{
+    background-image:url("./img/png/play_arrow_FILL0_wght400_GRAD0_opsz24.png");
+    background-size: 14px 14px;
+    width: 40px;
+    height: 40px;
+    background-size: 100% 100%;
+}
+*/
 
 .list-element-menu{
     background-image:url("./img/png/more_vert_FILL0_wght400_GRAD0_opsz24.png");
     background-color: transparent;
 }
+/*List-element view end*/
+
 
 
