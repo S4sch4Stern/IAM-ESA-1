@@ -190,10 +190,132 @@ li{
 }
 /*Button images end*/
 
-
-
-
 /*List-element view start*/
+
+.list-element {
+    padding: 10px;
+    display: flex;
+    align-items: center; /* Vertikal zentrieren */
+    position: relative; /* relative Positionierung für das Overlay */
+}
+
+.list-element-image {
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+    margin-right: 10px; /* Abstand zwischen Bild und Attributen */
+}
+
+.list-element-attributes {
+    height: 70px;
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Platz zwischen den Attributen */
+    flex-grow: 1; /* Flex wachsen, um Platz für das Menü zu lassen */
+    color:var(--myapp-color-darkgreyline);
+}
+
+.list-element-attributes > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Damit die Tags ganz oben stehen */
+}
+
+.attribute-origin,
+.attribute-date,
+.attribute-title,
+.attribute-tag {
+    margin: 0;
+    padding: 0;
+}
+
+.attribute-title{
+    font-size: 20px;
+    color: black;;
+}
+
+.attribute-tag::before {
+    content: url("./img/png/play_arrow_FILL0_wght400_GRAD0_opsz24.png");
+    vertical-align: middle; /* Das Bild wird vertikal zentriert */
+
+}
+
+.attribute-date {
+    float: right;
+}
+
+.list-element-menu {
+    position: absolute;
+    bottom: 0px; /* oder eine passende Zahl für den gewünschten Abstand */
+    right: 0px; /* oder eine passende Zahl für den gewünschten Abstand */
+    background-image: url("./img/png/more_vert_FILL0_wght400_GRAD0_opsz24.png");
+    background-size: contain; /* Stellen Sie sicher, dass das Bild in der Schaltfläche vollständig sichtbar ist */
+    border: none;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+
+/*
+.list-element-menu{
+    display: block;
+    position: absolute;
+    background-image: url(./img/glyphicons/png/glyphicons-518-option-vertical.png);
+    background-color: transparent;
+    background-size: cover;
+    height: 25px;
+    width: 10px;
+    border: none;
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-origin: content-box;
+    background-position: center center;
+    filter: invert(90%);
+    -webkit-filter: invert(90%);
+    right: 10px;
+    bottom: 9px;
+    z-index: 3;
+}
+*/
+/*
+.list-element{
+    padding: 10px 10px 20px 10px;
+}
+*/
+/*
+.list-element-image{
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+}
+.attribute-origin{
+ 
+}
+.list-element-attributes{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 100px;
+    right: 10px;
+   
+
+}
+.attribute-origin{
+display: left;
+}
+.attibute-date{
+ 
+}
+.list-element-menu{
+float: right;
+}
+*/
+
+
+
+
 /*
 .list-element{
     padding: 10px 10px 20px 10px;
