@@ -1,15 +1,13 @@
-/* Modifiziert nach den Vorgaben von Aufgabe 1 (HTM & CSS)  durch: Alexander Thofern */
+/* Modifiziert nach den Vorgaben von Aufgabe 1 (HTM & CSS1)  durch: Alexander Thofern */
 
 /* variable declarations */
 :root {
     --myapp-color-header: rgb(255, 255, 255);
     --myapp-color-main: rgb(255, 255, 255);
     --myapp-color-background: rgb(255, 255, 255);
-    --myapp-color-darkgreyline: rgb(154, 153, 153);
+    --myapp-color-darkgreyline: rgb(177, 177, 177);
     --myapp-color-listline: rgb(208, 208, 208);
     --myapp-color-footerline: rgb(255, 131, 0);
-   
-
 }
 
 html, body {
@@ -24,7 +22,6 @@ html, body {
 }
 
 /* block text selection */
-
 * {
     user-select: none;
     -moz-user-select: none;
@@ -38,8 +35,7 @@ header {
     height: 50px;
     width: 100%;
     max-width: 100%;
-    line-height: 50px;
- 
+    line-height: 50px; 
 }
 
 main {
@@ -78,6 +74,7 @@ h1 {
     padding: 20px 0px 0px 0px;
          
 }
+
 ul{
     background-color: var(--myapp-color-listline);
 }
@@ -86,15 +83,14 @@ li{
     margin: none;
     padding: none;
     background-color: var(--myapp-color-background);
-    border-bottom: 3px solid var(--myapp-color-darkgreyline);
+    border-bottom: 1px solid var(--myapp-color-darkgreyline);
     list-style: none;
     display: flex;
     flex-direction: column;
 }
-
 /*main html structure end*/
 
-/*buttons style */
+/*Buttons style */
 .button {
     filter: invert(90%);
     -webkit-filter: invert(90%);
@@ -114,28 +110,23 @@ li{
     background-position: center center;
     
 }
-/*buttons style end*/
+/*Buttons style end*/
 
 /*Button images */
 .icon-sandwich {
     filter: invert(60%); 
     -webkit-filter: invert(60%);
     background-image: url("./img/png/menu_FILL0_wght400_GRAD0_opsz24.png");
-    background-size: 23px 23px;
     justify-content: flex-start;
     width: 40px;
     height: 40px;
-    background-size: 100% 100%;
-
-
-      
+    background-size: 100% 100%;      
 }
 
 .icon-tiles {
     filter: invert(60%); 
     -webkit-filter: invert(60%);
     background-image: url("./img/png/grid_view_FILL0_wght400_GRAD0_opsz24.png");
-    background-size: 23px 23px;
     justify-content: flex-end;
     margin-left: auto;
     width: 40px;
@@ -147,7 +138,6 @@ li{
     filter: invert(60%); 
     -webkit-filter: invert(60%);
     background-image: url("./img/png/add_FILL0_wght400_GRAD0_opsz24.png");
-    background-size: 23px 23px;
     justify-content: flex-start;
     width: 40px;
     height: 40px;
@@ -158,7 +148,6 @@ li{
     filter: invert(60%); 
     -webkit-filter: invert(60%);
     background-image: url("./img/png/more_vert_FILL0_wght400_GRAD0_opsz24.png");
-    background-size: 23px 23px;
     justify-content: flex-start;
     width: 40px;
     height: 40px;
@@ -169,7 +158,6 @@ li{
     filter: invert(60%); 
     -webkit-filter: invert(60%);
     background-image: url("./img/png/logout_FILL0_wght400_GRAD0_opsz24.png");
-    background-size: 23px 23px;
     justify-content: flex-start;
     margin-right: auto;
     width: 40px;
@@ -191,12 +179,12 @@ li{
 /*Button images end*/
 
 /*List-element view start*/
-
 .list-element {
-    padding: 10px;
+    padding: 8px;
+    padding-bottom: 23px;
     display: flex;
     align-items: center; /* Vertikal zentrieren */
-    position: relative; /* relative Positionierung für das Overlay */
+    position: relative;
 }
 
 .list-element-image {
@@ -219,7 +207,7 @@ li{
 .list-element-attributes > div {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Damit die Tags ganz oben stehen */
+    align-items: flex-start;
 }
 
 .attribute-origin,
@@ -231,148 +219,38 @@ li{
 }
 
 .attribute-title{
-    font-size: 20px;
-    color: black;;
+    font-size: 19px;
+    color: black;
+    padding-top: 7px;
+    padding-bottom: 3px;
+}
+
+.attribute-origin{
+    font-size: 14px;
 }
 
 .attribute-tag::before {
     content: url("./img/png/play_arrow_FILL0_wght400_GRAD0_opsz24.png");
-    vertical-align: middle; /* Das Bild wird vertikal zentriert */
-
+    vertical-align: middle;
+    filter: invert(60%); 
+    -webkit-filter: invert(60%);
 }
 
 .attribute-date {
     float: right;
+    font-size: 14px;
+
 }
 
 .list-element-menu {
     position: absolute;
-    bottom: 0px; /* oder eine passende Zahl für den gewünschten Abstand */
-    right: 0px; /* oder eine passende Zahl für den gewünschten Abstand */
+    bottom: 7px; 
+    right: 0px;
     background-image: url("./img/png/more_vert_FILL0_wght400_GRAD0_opsz24.png");
-    background-size: contain; /* Stellen Sie sicher, dass das Bild in der Schaltfläche vollständig sichtbar ist */
+    background-color: transparent;
     border: none;
     width: 35px;
     height: 35px;
     cursor: pointer;
 }
-
-
-/*
-.list-element-menu{
-    display: block;
-    position: absolute;
-    background-image: url(./img/glyphicons/png/glyphicons-518-option-vertical.png);
-    background-color: transparent;
-    background-size: cover;
-    height: 25px;
-    width: 10px;
-    border: none;
-    background-repeat: no-repeat;
-    display: inline-block;
-    background-origin: content-box;
-    background-position: center center;
-    filter: invert(90%);
-    -webkit-filter: invert(90%);
-    right: 10px;
-    bottom: 9px;
-    z-index: 3;
-}
-*/
-/*
-.list-element{
-    padding: 10px 10px 20px 10px;
-}
-*/
-/*
-.list-element-image{
-    height: 70px;
-    width: 70px;
-    object-fit: cover;
-}
-.attribute-origin{
- 
-}
-.list-element-attributes{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    left: 100px;
-    right: 10px;
-   
-
-}
-.attribute-origin{
-display: left;
-}
-.attibute-date{
- 
-}
-.list-element-menu{
-float: right;
-}
-*/
-
-
-
-
-/*
-.list-element{
-    padding: 10px 10px 20px 10px;
-    height: 70px;
-    width: 100%;
-}
-
-
-.list-element-attributes{
-    padding: 10px 10px 20px 10px;
-    height: 70px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    /*position: absolute;*//*
-    left: 90px;
-    right: 10px;
-}
-/*
-.list-element-image{
-    height: 70px;
-    width: 70px;
-    /*  position: absolute;
-        object-fit: cover;
-        *//*
-}
-
-.attribute-origin{
-    margin: 0px;
-    padding: 0px;
-    padding-bottom: 6px;
-
-
-}
-
-.attribute-date{
-    margin: 0px;
-    padding: 0px;
-    padding-bottom: 6px;
-
-
-}
-/*
-.viewport .attribute-tag::before{
-    background-image:url("./img/png/play_arrow_FILL0_wght400_GRAD0_opsz24.png");
-    background-size: 14px 14px;
-    width: 40px;
-    height: 40px;
-    background-size: 100% 100%;
-}
-*/
-
-.list-element-menu{
-    background-image:url("./img/png/more_vert_FILL0_wght400_GRAD0_opsz24.png");
-    background-color: transparent;
-}
 /*List-element view end*/
-
-
-
