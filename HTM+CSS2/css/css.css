@@ -1,0 +1,323 @@
+/* Modifiziert nach den Vorgaben von Aufgabe 1 (HTM & CSS1+2)  durch: Alexander Thofern */
+
+/* variable declarations */
+:root {
+    --myapp-color-header: rgb(255, 255, 255);
+    --myapp-color-main: rgb(255, 255, 255);
+    --myapp-color-background: rgb(255, 255, 255);
+    --myapp-color-darkgreyline: rgb(177, 177, 177);
+    --myapp-color-listline: rgb(208, 208, 208);
+    --myapp-color-footerline: rgb(255, 131, 0);
+}
+
+html, body {
+    background-color: var(--myapp-color-background);
+    margin: 0px;
+    font-family: "Avenir Medium", sans-serif;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+}
+
+/* block text selection */
+* {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+/*main html structure start*/
+header {
+    background-color: var(--myapp-color-header);
+    border-bottom: 5px solid var(--myapp-color-darkgreyline);
+    height: 50px;
+    width: 100%;
+    max-width: 100%;
+    line-height: 50px; 
+}
+
+main {
+    background-color: var(--myapp-color-main);
+    width: 100%;
+    max-width: 100%;   
+    height: calc(100% - (55px + 55px));
+    height: -webkit-calc(100% - (55px + 55px));
+    max-height: calc(100% - (55px + 55px));
+    max-height: -webkit-calc(100% - (55px +55px));
+}
+
+footer {   
+    background-color: var(--myapp-color-header);
+    border-top: 5px solid var(--myapp-color-footerline);
+    height: 50px;
+    width: 100%;
+    max-width: 100%;
+}
+  
+header, footer{
+    display: flex;
+}
+
+h1 {
+    font-size: 20pt;
+    font-weight: normal;
+    margin: 0px;
+    display: inline-block;
+    margin-right: auto;
+}
+
+ul{
+    list-style: none;
+    padding: 0px;
+}
+.main-list{
+    margin: 0px;
+    border-top: 16px solid var(--myapp-color-listline);
+         
+}
+/*main html structure end*/
+
+/*Buttons style */
+.button {
+    filter: invert(90%);
+    -webkit-filter: invert(90%);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size:30px 30px;
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    padding: 0px;
+    border: none;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    background-origin: content-box;
+    background-position: center center;
+    
+}
+/*Buttons style end*/
+
+/*Button images */
+.icon-sandwich {
+    filter: invert(60%); 
+    -webkit-filter: invert(60%);
+    background-image: url("./img/png/menu_FILL0_wght400_GRAD0_opsz24.png");
+    justify-content: flex-start;
+    width: 40px;
+    height: 40px;
+    background-size: 100% 100%;      
+}
+
+.icon-tiles {
+    filter: invert(60%); 
+    -webkit-filter: invert(60%);
+    background-image: url("./img/png/grid_view_FILL0_wght400_GRAD0_opsz24.png");
+    justify-content: flex-end;
+    margin-left: auto;
+    width: 40px;
+    height: 40px;
+    background-size: 100% 100%;
+}
+
+.icon-plus {
+    filter: invert(60%); 
+    -webkit-filter: invert(60%);
+    background-image: url("./img/png/add_FILL0_wght400_GRAD0_opsz24.png");
+    justify-content: flex-start;
+    width: 40px;
+    height: 40px;
+    background-size: 100% 100%;
+}
+
+.list-element-menu {
+    filter: invert(60%); 
+    -webkit-filter: invert(60%);
+    background-image: url("./img/png/more_vert_FILL0_wght400_GRAD0_opsz24.png");
+    justify-content: flex-start;
+    width: 40px;
+    height: 40px;
+    background-size: 100% 100%;
+}
+
+.icon-logout {
+    filter: invert(60%); 
+    -webkit-filter: invert(60%);
+    background-image: url("./img/png/logout_FILL0_wght400_GRAD0_opsz24.png");
+    justify-content: flex-start;
+    margin-right: auto;
+    width: 40px;
+    height: 40px;
+    background-size: 100% 100%;
+    
+}
+
+.icon-refresh {
+    filter: invert(60%); 
+    -webkit-filter: invert(60%);
+    background-image: url("./img/png/sync_FILL0_wght400_GRAD0_opsz24.png");
+    justify-content: flex-end;
+    margin-left: auto;
+    width: 40px;
+    height: 40px;
+    background-size: 100% 100%;
+}
+/*Button images end*/
+
+/*List-element view start*/
+    /*view-list*/
+.viewport-list main {
+    position: relative; 
+    overflow: hidden; 
+    background: transparent;
+    border-bottom: none;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.main-list .list-element {
+    padding: 8px;
+    padding-bottom: 23px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid var(--myapp-color-darkgreyline);
+}
+
+.list-element-image {
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+    margin-right: 10px; /* Abstand zwischen Bild und Attributen */
+}
+
+.list-element-attributes {
+    height: 70px;
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Platz zwischen den Attributen */
+    flex-grow: 1; /* Flex wachsen, um Platz für das Menü zu lassen */
+    color:var(--myapp-color-darkgreyline);
+}
+
+.list-element-attributes > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.attribute-origin,
+.attribute-date,
+.attribute-title,
+.attribute-tag {
+    margin: 0;
+    padding: 0;
+}
+
+.attribute-title{
+    font-size: 19px;
+    color: black;
+    padding-top: 7px;
+    padding-bottom: 3px;
+}
+
+.attribute-origin{
+    font-size: 14px;
+}
+
+.attribute-tag::before {
+    content: url("./img/png/play_arrow_FILL0_wght400_GRAD0_opsz24.png");
+    vertical-align: middle;
+    filter: invert(60%); 
+    -webkit-filter: invert(60%);
+}
+
+.attribute-date {
+    float: right;
+    font-size: 14px;
+
+}
+
+.list-element-menu {
+    position: absolute;
+    bottom: 7px; 
+    right: 0px;
+    background-image: url("./img/png/more_vert_FILL0_wght400_GRAD0_opsz24.png");
+    background-color: transparent;
+    border: none;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+    /*view-tile*/
+
+.viewport-tiles main{
+    position: relative; 
+    overflow: hidden; 
+    background: transparent;
+    border-bottom: none;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.icon-list {
+    background-image: url("./img/png/list_FILL0_wght400_GRAD0_opsz24.png");
+    filter: invert(60%); 
+    -webkit-filter: invert(60%);
+    justify-content: flex-end;
+    margin-left: auto;
+    width: 40px;
+    height: 40px;
+    background-size: 100% 100%;
+}
+
+.main-tile{
+    border-top: 16px solid var(--myapp-color-listline);
+    padding: 16px;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0px;
+}
+
+
+@media only screen and (min-width: 600px) {
+    .main-tile{
+        border-top: 16px solid var(--myapp-color-listline);
+        padding: 16px;
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 0px;
+    }
+}
+
+.main-tile .list-element{
+    display:block;
+    align-items: center; 
+    position: relative;
+    aspect-ratio: 1;
+    border: none;    
+    padding-bottom: 0px;
+} 
+
+.main-tile .list-element-attributes{
+    display: block;
+}
+
+.main-tile .list-element-attributes p {
+    display: none;
+}
+
+.main-tile .list-element .list-element-image {
+    object-fit: cover; 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+/*List-element view end*/
