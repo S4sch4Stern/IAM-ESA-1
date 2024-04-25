@@ -11,8 +11,7 @@
     <title>Aufgaben Nr.1 HTM, CSS2, JSL, JSR</title>
 
     <link rel="stylesheet" href="css/css.css"/>
-
-
+    
 </head>
 <body class="viewport-list">
     <!--Kopfzeile mit Menüansicht-->
@@ -30,18 +29,18 @@
     <!--Hauptbereich mit Listen- oder Kachelansicht-->
     <main>  <!--Listenlement-->
             <ul id="view-switch" class="main-list">
-                <li id="list-item1" class="list-items">                
+                <li class="list-items">                
                     <div class="list-element">
                         <img class="list-element-image" src="https://picsum.photos/301"/>
                         <div class="list-element-attributes">
-                            <div><p class="attribute-origin">lorempixel.comx</p><p class="attribute-date">22.2.2016</p></div>
+                            <div><p class="attribute-origin">lorempixel.com</p><p class="attribute-date">22.2.2016</p></div>
                             <div><p class="attribute-title">M1</p></div>
                             <div><p class="attribute-tag">0</p></div>
                         </div>      
                         <button class="list-element-menu"></button>
                     </div>
                 </li>
-                <li id="list-item" class="list-items"> 
+                <li class="list-items"> 
                     <div class="list-element">
                         <img class="list-element-image" src="https://picsum.photos/302"/>
                         <div class="list-element-attributes">
@@ -52,7 +51,7 @@
                         <button class="list-element-menu"></button>
                     </div>
                 </li>
-                <li id="list-item" class="list-items">
+                <li class="list-items">
                     <div class="list-element">
                         <img class="list-element-image" src="https://picsum.photos/303"/>
                         <div class="list-element-attributes">
@@ -63,7 +62,7 @@
                         <button class="list-element-menu"></button>    
                     </div>
                 </li>
-                <li id="list-item" class="list-items">
+                <li class="list-items">
                     <div class="list-element">
                         <img class="list-element-image" src="https://picsum.photos/304"/>
                         <div class="list-element-attributes">
@@ -74,7 +73,7 @@
                         <button id="button-menu" class="list-element-menu"></button> 
                     </div>
                 </li>
-                <li id="list-item" class="list-items">
+                <li class="list-items">
                     <div class="list-element">
                         <img class="list-element-image" src="https://picsum.photos/305"/>
                         <div class="list-element-attributes">
@@ -82,7 +81,7 @@
                             <div><p class="attribute-title">M5</p></div>
                             <div><p class="attribute-tag">0</p></div>
                         </div>      
-                        <button class="list-element-menu"></button>
+                        <button onclick="initEventhandlerForListElements2()" class="list-element-menu"></button>
                     </div>
                 </li>
             </ul>
@@ -91,12 +90,11 @@
     <footer>
         <button class="button icon-logout"></button>
         <button class="button icon-refresh"></button>
-    </footer>
-    
-    <!-- add interaction control -->
-    <script type="application/javascript" src="js/jsl.js"></script>
-    <script type="application/javascript" src="js/jsr.js"></script>
-    <!-- add the "library" script wrapping XMLHttpRequest -->
-    <script type="application/javascript" src="js/lib/xhr.js"></script>
+    </footer>    
+   <!-- add interaction control -->
+   <script type="application/javascript" src="js/jsl.js"></script>
+   <script type="application/javascript" src="js/jsr.js"></script>
+   <!-- add the "library" script wrapping XMLHttpRequest -->
+   <script type="application/javascript" src="js/lib/xhr.js"></script>
 </body>
 </html>
