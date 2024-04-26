@@ -42,6 +42,43 @@ function handleSwitchView() {
  * Function to do an alert by clicking on a li element in both views
  *  alerts the title of the list element
  */
+/*
+var listItems = document.getElementsByClassName("list-items");
+for(var i = 0; i < listItems.length; i++){
+  listItems[i].addEventListener("click", function() { 
+    alert("Title: " + this.getElementsByClassName("attribute-title")[0].innerHTML);
+    });
+}
+
+
+/**
+ * JSL 2
+ * Function to do an alert by clicking on the button of a li element in both views
+ *  alerts the title and URL of the list element
+ */
+/*
+const liElementButton = document.getElementsByClassName("list-element-menu");
+for(let i = 0; i < liElementButton.length; i++){
+  liElementButton[i].addEventListener("click", function(event) {
+    //stopPropagation function to prevent event bubbling of the eventlisteners on the li-elements 
+    event.stopPropagation();  
+    alert("Title: " + document.getElementsByClassName("attribute-title")[i].innerHTML
+            +"\nURL: " + document.getElementsByClassName("attribute-origin")[i].innerHTML);
+  }, true);
+  
+}
+*/
+
+
+
+
+// JSL 1 Alert function
+
+/**
+ * JSL 2 
+ * Function to do an alert by clicking on a li element in both views
+ *  alerts the title of the list element
+ */
 
 var listItems = document.getElementsByClassName("list-items");
 for(var i = 0; i < listItems.length; i++){
@@ -67,6 +104,8 @@ for(let i = 0; i < liElementButton.length; i++){
   }, true);
   
 }
+
+
 
 
 // Funktionen Verbesserung Alex
