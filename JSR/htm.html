@@ -1,4 +1,4 @@
-<!--Alle Anpassungen anhand der Vorgaben der Aufgabe HTM+CSS1+2-->
+<!--Modifiziert und angepasst durch Alexander Thofern anhand der Anforderungen der Aufgaben HTM+CSS1+2+JSL1+2+JSR1+2-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,9 +20,9 @@
         <button class="button icon-sandwich"></button>
          <!--Überschrift linksbündig-->
         <h1>Medien</h1>
-         <!--Button Icon Kachel rechtsbündig-->
+         <!--Button Icon Kachel rechtsbündig und mit handleSwitchView Funktion-->
         <button onclick="handleSwitchView()" id="switchButton" class="button icon-tiles"></button>
-        <!--Button Icon Plus rechtsbündig-->
+        <!--Button Icon Plus rechtsbündig und addElement Funktion-->
         <button onclick="addElement()" class="button icon-plus"></button>
     </header>
 
@@ -35,6 +35,7 @@
         <!--Fußzeile mit Logout- und Refreshbutton-->
     <footer>
         <button class="button icon-logout"></button>
+        <!--Refreshbutton mit refreshListElement Funktion-->
         <button onclick="refreshListElements()" class="button icon-refresh"></button>
     </footer>    
     <!-- add the "library" script wrapping XMLHttpRequest -->
