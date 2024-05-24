@@ -123,14 +123,15 @@ function createLiElements(items) {
   });
 }
 
-// Übergabe der JSON Datei mittels Link des eigenen Live Servers
-// Es wurde der Live Server "127.0.0.1:5501" von vscode verwendet
-// folgender Pfad "http://127.0.0.1:5500/IAM-ESA-1/.../listitems.json" muss angepasst werden,
-// sofern die Anwendung auf einem anderen Server gestartet werden soll
-/*
-const apiUrl = "http://127.0.0.1:5501/IAM-ESA-1/JSR/data/listitems.json";
-*/
+
+/**
+ * Eigener Live Server
+ * const apiUrl = "http://127.0.0.1:5501/IAM-ESA-1/JSR/data/listitems.json";
+ */
+
+// Übergabe der JSON Datei an den Server
 const apiUrl = "/data/listitems.json";
+
 /**
  * function for loading data from server by start of the application
  */
